@@ -1,4 +1,5 @@
 import random
+import numpy as np
 from consts import *
 
 class GoBang(object):
@@ -81,3 +82,13 @@ class GoBang(object):
                 strr = strr + grid + '  '
             print(strr)
             numOfLine = numOfLine + 1
+    
+    def get_map_feature(self):
+        res = np.zeros(225)
+        for index_i in range(N):
+            for index_j in range(N):
+                if self.chessMap[index_i][index_j] == ChessboardState.WHITE:
+                    res[index_i * N + index_j] = 1
+                elif self.chessMap[index_i][index_j] == ChessboardState.BLACK:
+                    res[index_i * N + index_j] = 2
+        return res
