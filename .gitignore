@@ -1,5 +1,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+paper/
 *.py[cod]
 *$py.class
 
@@ -102,3 +103,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+*.npz
+*.npy
+*.pkl
+*.model
